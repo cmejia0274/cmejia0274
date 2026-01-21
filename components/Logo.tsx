@@ -20,14 +20,14 @@ const Logo: React.FC<LogoProps> = ({ className = "h-12", showText = true, varian
   }
 
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
+    <div className={`flex items-center gap-2 md:gap-4 ${className}`}>
       <img 
         src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/altitude-logo-250x250-LLpREntkMd1KJUCL.png" 
         alt="Altitude Logo" 
         className="h-full w-auto object-contain"
       />
       {showText && (
-        <span className="text-2xl font-black tracking-widest text-[#003456]">
+        <span className="text-lg md:text-2xl font-black tracking-normal md:tracking-widest text-[#003456] whitespace-nowrap">
           ALTITUDE
         </span>
       )}
