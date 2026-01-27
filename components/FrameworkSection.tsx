@@ -40,18 +40,18 @@ const FrameworkSection: React.FC = () => {
         <div className="text-center mb-16 reveal">
           <div className="inline-block mb-4 h-1.5 w-12 bg-[#7edb44] rounded-full"></div>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-8">
-            The Altitude Framework
+            The Altitude Operating System Framework
           </h2>
           <div className="max-w-5xl mx-auto">
             <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed mb-12">
-              Not another project management tool. Not another dashboard. <br />
+              Not another project management tool. <br />
               <span className="text-white font-bold">
                 A deliberately architected executive operating framework that connects strategy to execution.
               </span>
             </p>
 
-            {/* Added Altitude Chart Image */}
-            <div className="relative mb-20 group reveal-scale">
+            {/* Altitude Chart Image - Prominent Placement */}
+            <div className="relative mb-24 group reveal-scale">
               <div className="absolute -inset-4 bg-[#7edb44]/10 rounded-[3rem] blur-2xl group-hover:bg-[#7edb44]/20 transition-all duration-700"></div>
               <div className="relative bg-white/5 border border-white/10 p-4 md:p-8 rounded-[3rem] backdrop-blur-sm shadow-2xl overflow-hidden">
                 <img 
@@ -59,6 +59,9 @@ const FrameworkSection: React.FC = () => {
                   alt="Altitude Executive Operating System Chart" 
                   className="w-full h-auto rounded-[2rem] shadow-2xl brightness-105"
                 />
+                <div className="absolute bottom-6 right-6 bg-[#003456]/80 backdrop-blur-md text-white px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest border border-white/10">
+                  Altitude Operating System Architecture
+                </div>
               </div>
             </div>
           </div>
@@ -90,20 +93,20 @@ const FrameworkSection: React.FC = () => {
               <div className="flex flex-col items-center gap-1 mb-4">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl md:text-3xl">🧠</span>
-                  <h3 className="text-xl md:text-3xl font-black tracking-tighter text-center">Executive Narrative (Across All Layers)</h3>
+                  <h3 className="text-xl md:text-3xl font-black tracking-tighter text-center">Executive Narrative Interface</h3>
                 </div>
-                <p className="text-[10px] font-black text-[#64748b] uppercase tracking-[0.3em]">THE EXECUTIVE NARRATIVE INTERFACE</p>
+                <p className="text-[10px] font-black text-[#64748b] uppercase tracking-[0.3em]">Closing the Governance Loop</p>
               </div>
               
               <div className="mb-6">
                 <p className="text-lg md:text-xl font-bold italic mb-4 leading-tight text-gray-800">
-                  This is where the system closes the loop.
+                  Where strategy meets reality.
                 </p>
                 <ul className="space-y-1.5 inline-block text-left">
                   {[
-                    "Auto-generated synthesis of strategy, priorities, execution, and decisions",
-                    "Used for CEO sensemaking, board updates, and leadership alignment",
-                    "One narrative grounded in reality — not five competing versions"
+                    "Auto-generated synthesis of strategy, priorities, and execution",
+                    "A single, grounded narrative for board and leadership alignment",
+                    "Eliminates manual reporting and narrative drift"
                   ].map((text, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm md:text-base font-medium text-gray-600">
                       <span className="text-[#7edb44] font-black text-lg mt-[-2px]">●</span>
@@ -113,10 +116,9 @@ const FrameworkSection: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Replace block - centered and below bullets */}
               <div className="inline-block px-6 py-2 bg-[#f8f9fa] border border-gray-100 rounded-xl">
                 <p className="text-[11px] md:text-xs font-medium text-gray-500">
-                  <span className="font-black text-[#003456] mr-2">Replaces:</span> manual synthesis, rewrites, and narrative drift
+                  <span className="font-black text-[#003456] mr-2">Replaces:</span> manual synthesis and subjective status updates
                 </p>
               </div>
             </div>
@@ -126,7 +128,7 @@ const FrameworkSection: React.FC = () => {
         {/* Final Statement */}
         <div className="text-center max-w-4xl mx-auto flex flex-col items-center reveal">
           <h4 className="text-2xl md:text-3xl font-black mb-4 leading-tight">
-            Delivered as a live operating system, not a deck or a framework PDF.
+            Delivered as a live operating system.
           </h4>
           <p className="text-lg md:text-xl text-[#8ae4d9] font-bold opacity-90 mb-12">
             Installed directly into how your company already runs.
@@ -137,7 +139,7 @@ const FrameworkSection: React.FC = () => {
               to="/product" 
               className="inline-flex items-center px-10 py-5 bg-white text-[#003456] font-black text-xl rounded-full hover:scale-105 transition-all shadow-2xl group"
             >
-              Explore the Product in Detail
+              Explore the Product Detail
               <span className="ml-4 transform group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
