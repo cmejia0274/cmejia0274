@@ -1,17 +1,11 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from "react-router-dom";
-import Hero from './components/Hero';
-import PainSection from './components/PainSection';
-import OpportunityCost from './components/OpportunityCost';
-import WhoThisHelps from './components/WhoThisHelps';
-import FrameworkSection from './components/FrameworkSection';
-import EvolutionSection from './components/EvolutionSection';
-import SelfAssessment from './components/SelfAssessment';
-import OurProductPage from './components/OurProduct'; 
+import HomePage from './components/HomePage';
+import OverviewPage from './components/OverviewPage';
+import TheArchitecturePage from './components/TheArchitecture'; 
 import OrientationPage from './components/OrientationPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
-import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ChatBot from './components/ChatBot';
@@ -28,19 +22,6 @@ const ScrollToTop = () => {
   }, [pathname]);
   return null;
 };
-
-const HomePage: React.FC = () => (
-  <>
-    <Hero />
-    <PainSection />
-    <OpportunityCost />
-    <WhoThisHelps />
-    <FrameworkSection />
-    <EvolutionSection />
-    <SelfAssessment />
-    <CTASection />
-  </>
-);
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -72,10 +53,11 @@ const App: React.FC = () => {
       <ScrollToTop />
       <Header />
       
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/product" element={<OurProductPage />} />
+          <Route path="/overview" element={<OverviewPage />} />
+          <Route path="/architecture" element={<TheArchitecturePage />} />
           <Route path="/orientation" element={<OrientationPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
