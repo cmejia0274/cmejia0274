@@ -7,11 +7,13 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ className = "h-12", showText = true, variant = 'default' }) => {
+  const logoUrl = "https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/altitude-logo-250x250-LLpREntkMd1KJUCL.png";
+
   if (variant === 'footer') {
     return (
       <div className={`bg-white p-1.5 rounded-sm inline-block ${className}`}>
         <img 
-          src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/altitude-logo-250x250-LLpREntkMd1KJUCL.png" 
+          src={logoUrl} 
           alt="Altitude Icon" 
           className="h-full w-auto block object-contain"
         />
@@ -22,7 +24,7 @@ const Logo: React.FC<LogoProps> = ({ className = "h-12", showText = true, varian
   return (
     <div className={`flex items-center gap-2 md:gap-4 ${className}`}>
       <img 
-        src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/altitude-logo-250x250-LLpREntkMd1KJUCL.png" 
+        src={logoUrl} 
         alt="Altitude Logo" 
         className="h-full w-auto object-contain"
       />

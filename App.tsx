@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from "react-router-dom";
 import Hero from './components/Hero';
 import PainSection from './components/PainSection';
 import OpportunityCost from './components/OpportunityCost';
@@ -15,6 +15,11 @@ import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ChatBot from './components/ChatBot';
+import TheBlindSpot from './components/TheBlindSpot';
+import ActivationPage from './components/ActivationPage';
+import TheResetPage from './components/TheResetPage';
+import SoloActivationAccess from './components/SoloActivationAccess';
+import JointActivationAccess from './components/JointActivationAccess';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -41,7 +46,6 @@ const App: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Subtle Scroll-Triggered Animations Setup
     const observerOptions = {
       root: null,
       threshold: 0.1,
@@ -52,7 +56,6 @@ const App: React.FC = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
-          // Once animated, we don't need to observe it anymore for a cleaner performance
           observer.unobserve(entry.target);
         }
       });
@@ -62,7 +65,7 @@ const App: React.FC = () => {
     revealElements.forEach(el => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [location]); // Re-run when navigation happens
+  }, [location]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#fefefe]">
@@ -76,6 +79,11 @@ const App: React.FC = () => {
           <Route path="/orientation" element={<OrientationPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/blind-spot" element={<TheBlindSpot />} />
+          <Route path="/activation" element={<ActivationPage />} />
+          <Route path="/reset" element={<TheResetPage />} />
+          <Route path="/access-solo" element={<SoloActivationAccess />} />
+          <Route path="/access-joint" element={<JointActivationAccess />} />
         </Routes>
       </main>
 

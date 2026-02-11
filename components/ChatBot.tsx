@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import Logo from './Logo';
@@ -44,24 +45,26 @@ Maintain a professional, high-level, executive tone. Be concise and structured.`
     setIsLoading(true);
 
     try {
+      // Use process.env.API_KEY exclusively as required by guidelines
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      const chat = ai.chats.create({
+      
+      // Await generateContentStream to get the async iterable, and move systemInstruction to the config
+      const chat = await ai.models.generateContentStream({
         model: 'gemini-3-pro-preview',
+        contents: [
+          ...messages.map(m => ({ role: m.role, parts: [{ text: m.text }] })),
+          { role: 'user', parts: [{ text: userMessage }] }
+        ],
         config: {
-          systemInstruction,
-          temperature: 0.7,
-        },
-        // We initialize history with previous messages except the welcome one which we keep separate in UI logic usually
-        // but here we'll just pass everything after the first one to keep it simple
-        history: messages.slice(1).map(m => ({ role: m.role, parts: [{ text: m.text }] }))
+          systemInstruction: systemInstruction
+        }
       });
 
       let modelResponse = "";
       setMessages(prev => [...prev, { role: 'model', text: '' }]);
 
-      const result = await chat.sendMessageStream({ message: userMessage });
-      
-      for await (const chunk of result) {
+      for await (const chunk of chat) {
+        // Access chunk.text property directly
         const chunkText = chunk.text || "";
         modelResponse += chunkText;
         setMessages(prev => {
@@ -138,7 +141,7 @@ Maintain a professional, high-level, executive tone. Be concise and structured.`
               </button>
             </div>
             <p className="text-[10px] text-gray-400 mt-2 text-center font-medium">
-              Powered by Gemini-3-Pro-Preview
+              Powered by Altitude Operating Engine
             </p>
           </div>
         </div>
