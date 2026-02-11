@@ -202,14 +202,6 @@ const TheBlindSpot: React.FC = () => {
                   addressing them.</p>
              </div>
           </div>
-
-          {/* Natural Progression Link */}
-          <div className="pt-12 text-center">
-            <p className="text-gray-400 font-bold uppercase tracking-[0.2em] text-xs mb-4">Phase 01 Complete?</p>
-            <Link to="/activation" className="text-[#003456] font-black underline hover:text-[#7edb44] transition-colors">
-              Move to Phase 02: Activation →
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -267,7 +259,7 @@ const TheBlindSpot: React.FC = () => {
             </div>
           )}
 
-          <div className="bg-white text-[#003456] p-10 md:p-16 rounded-[3rem] 
+          <div id="guide-card" className="bg-white text-[#003456] p-10 md:p-16 rounded-[3rem] 
             shadow-2xl text-left">
             <div className="max-w-2xl mx-auto">
               {formStatus === 'success' ? (
@@ -300,41 +292,22 @@ const TheBlindSpot: React.FC = () => {
                     </a>
                   </div>
 
-                  {/* What Happens After Recognition? Card */}
-                  <div className="p-10 md:p-14 bg-white rounded-[2.5rem] border border-gray-100 shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
-                    <div className="flex flex-col items-center text-center">
-                      <h3 className="text-2xl md:text-4xl font-black text-[#003456] mb-4 uppercase tracking-tighter">
-                        What Happens After Recognition?
-                      </h3>
-                      <p className="text-lg md:text-xl text-gray-500 font-bold italic mb-8">
-                        Recognition is clarity. Activation is structure.
+                  {/* Internal Progress Info */}
+                  <div className="p-10 md:p-14 bg-white rounded-[2.5rem] border border-gray-100 shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 text-center">
+                    <h3 className="text-2xl md:text-3xl font-black text-[#003456] mb-4 uppercase tracking-tighter">
+                      What Happens After Recognition?
+                    </h3>
+                    <p className="text-lg md:text-xl text-gray-500 font-bold italic mb-8">
+                      Recognition is clarity. Activation is structure.
+                    </p>
+                    <div className="w-full h-px bg-gray-100 mb-8"></div>
+                    <div className="space-y-4">
+                      <span className="inline-block px-4 py-1.5 rounded-full bg-[#003456] text-white text-[10px] font-black uppercase tracking-[0.2em]">
+                        Stage 02 — Activation
+                      </span>
+                      <p className="text-gray-500 font-medium leading-relaxed">
+                        A 10-day structured visibility into how pressure is shaping your leadership rhythm.
                       </p>
-                      
-                      <div className="w-full h-px bg-gray-100 mb-8"></div>
-                      
-                      <div className="space-y-6 w-full max-w-md">
-                        <div className="flex flex-col items-center">
-                          <span className="inline-block px-4 py-1.5 rounded-full bg-[#003456] text-white text-[10px] font-black uppercase tracking-[0.2em] mb-4">
-                            Stage 02 — Activation
-                          </span>
-                          <h4 className="text-xl font-black text-[#003456] uppercase tracking-tight mb-2">Operating Diagnostic</h4>
-                          <p className="text-gray-500 font-medium leading-relaxed mb-8">
-                            A 10-day structured visibility into how pressure is shaping your leadership rhythm.
-                          </p>
-                        </div>
-                        
-                        <div className="flex flex-col items-center gap-4">
-                          <Link 
-                            to="/activation" 
-                            className="inline-flex items-center text-xl font-black text-[#003456] uppercase tracking-widest hover:text-[#7edb44] transition-colors group"
-                          >
-                            → Explore Activation
-                          </Link>
-                          <p className="text-[10px] font-black text-[#7edb44] uppercase tracking-[0.3em]">
-                            Founding Cohort begins April 6, 2026
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -451,6 +424,21 @@ const TheBlindSpot: React.FC = () => {
               )}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Natural Progression Link - Moved here to appear after the Download Guide card */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center reveal">
+          <p className="text-[#9ea7ae] font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-8">
+            PHASE 01 COMPLETE?
+          </p>
+          <Link 
+            to="/activation" 
+            className="text-2xl md:text-4xl font-black text-[#003456] underline decoration-2 underline-offset-[12px] hover:text-[#7edb44] hover:decoration-[#7edb44] transition-all inline-flex items-center"
+          >
+            Move to Phase 02: Activation →
+          </Link>
         </div>
       </section>
     </div>
