@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
           <div className="flex items-center">
             <p className="text-xs md:text-sm font-black uppercase tracking-[0.2em] leading-tight text-center lg:text-left">
-              FOUNDING ACTIVATION COHORT BEGINS — APRIL 6, 2026
+              ACTIVATION COHORT BEGINS — APRIL 6, 2026
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-8">
@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
               className="text-xs md:text-sm font-black uppercase tracking-widest hover:opacity-70 transition-all flex items-center gap-2 whitespace-nowrap"
             >
               <span>→</span> 
-              <span className="underline underline-offset-4 decoration-2">Enter the Founding Cohort</span>
+              <span className="underline underline-offset-4 decoration-2">Start the Diagnostic</span>
             </Link>
           </div>
         </div>
