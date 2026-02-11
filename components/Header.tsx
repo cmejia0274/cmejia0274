@@ -27,35 +27,17 @@ const Header: React.FC = () => {
             Home
           </Link>
 
-          {/* Dropdown for The Process */}
-          <div className="relative dropdown-container group">
-            <button 
-              className={`text-[9px] sm:text-[10px] md:text-sm font-black uppercase tracking-widest transition-colors whitespace-nowrap flex items-center gap-1 ${
-                isProcess 
-                  ? 'text-[#7edb44]' 
-                  : 'text-[#003456] group-hover:text-[#7edb44]'
-              }`}
-            >
-              The Process
-              <svg className="w-2 h-2 md:w-3 md:h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            
-            <div className="absolute top-full left-0 pt-4 dropdown-menu opacity-0 translate-y-2 visibility-hidden transition-all duration-300 pointer-events-none">
-              <div className="bg-white border border-gray-100 rounded-2xl shadow-2xl p-4 w-64 flex flex-col gap-1">
-                <Link to="/blind-spot" className="px-4 py-3 rounded-xl hover:bg-[#f8f9fa] text-[11px] font-black uppercase tracking-widest text-[#003456] hover:text-[#7edb44] transition-colors">
-                  Recognition
-                </Link>
-                <Link to="/activation" className="px-4 py-3 rounded-xl hover:bg-[#f8f9fa] text-[11px] font-black uppercase tracking-widest text-[#003456] hover:text-[#7edb44] transition-colors">
-                  Readiness
-                </Link>
-                <Link to="/reset" className="px-4 py-3 rounded-xl hover:bg-[#f8f9fa] text-[11px] font-black uppercase tracking-widest text-[#003456] hover:text-[#7edb44] transition-colors">
-                  Recalibration
-                </Link>
-              </div>
-            </div>
-          </div>
+          {/* "The Process" now links directly to Blind Spot */}
+          <Link 
+            to="/blind-spot" 
+            className={`text-[9px] sm:text-[10px] md:text-sm font-black uppercase tracking-widest transition-colors whitespace-nowrap ${
+              isProcess 
+                ? 'text-[#7edb44]' 
+                : 'text-[#003456] hover:text-[#7edb44]'
+            }`}
+          >
+            The Process
+          </Link>
 
           {/* Dropdown for The System */}
           <div className="relative dropdown-container group">

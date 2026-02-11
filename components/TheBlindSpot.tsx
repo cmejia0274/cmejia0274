@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const TheBlindSpot: React.FC = () => {
@@ -201,12 +202,20 @@ const TheBlindSpot: React.FC = () => {
                   addressing them.</p>
              </div>
           </div>
+
+          {/* Natural Progression Link */}
+          <div className="pt-12 text-center">
+            <p className="text-gray-400 font-bold uppercase tracking-[0.2em] text-xs mb-4">Phase 01 Complete?</p>
+            <Link to="/activation" className="text-[#003456] font-black underline hover:text-[#7edb44] transition-colors">
+              Move to Phase 02: Activation →
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Assessment Section with Lead Capture Form */}
       <section className="py-24 brand-gradient text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center reveal">
+        <div className="max-w-4xl mx-auto px-6 reveal text-center">
           <h2 className="text-3xl md:text-5xl font-black mb-8 tracking-tight">
             Does this sound familiar?
           </h2>
@@ -262,32 +271,72 @@ const TheBlindSpot: React.FC = () => {
             shadow-2xl text-left">
             <div className="max-w-2xl mx-auto">
               {formStatus === 'success' ? (
-                <div className="p-12 bg-gray-50 rounded-[2rem] border-2 
-                  border-[#7edb44] text-center animate-in zoom-in 
-                  duration-500">
-                  <div className="w-20 h-20 bg-[#7edb44] rounded-full flex 
-                    items-center justify-center mx-auto mb-6">
-                    <svg className="w-10 h-10 text-white" fill="none" 
-                      viewBox="0 0 24 24" stroke="currentColor" 
-                      strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" 
-                        d="M5 13l4 4L19 7" />
-                    </svg>
+                <div className="space-y-12">
+                  <div className="p-12 bg-gray-50 rounded-[2rem] border-2 
+                    border-[#7edb44] text-center animate-in zoom-in 
+                    duration-500 shadow-sm">
+                    <div className="w-20 h-20 bg-[#7edb44] rounded-full flex 
+                      items-center justify-center mx-auto mb-6">
+                      <svg className="w-10 h-10 text-white" fill="none" 
+                        viewBox="0 0 24 24" stroke="currentColor" 
+                        strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" 
+                          d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h4 className="text-2xl font-black mb-2 uppercase 
+                      tracking-tight">Success!</h4>
+                    <p className="text-gray-600 font-bold italic mb-8">
+                      Your guide is downloading. If it doesn't start, use 
+                      the link below.
+                    </p>
+                    <a 
+                      href="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/the-blind-spot-lbhsXob401YUMWiX.pdf" 
+                      className="text-[#003456] font-black underline 
+                        hover:text-[#7edb44]"
+                      target="_blank"
+                    >
+                      Direct Download Link
+                    </a>
                   </div>
-                  <h4 className="text-2xl font-black mb-2 uppercase 
-                    tracking-tight">Success!</h4>
-                  <p className="text-gray-600 font-bold italic mb-8">
-                    Your guide is downloading. If it doesn't start, use 
-                    the link below.
-                  </p>
-                  <a 
-                    href="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/the-blind-spot-lbhsXob401YUMWiX.pdf" 
-                    className="text-[#003456] font-black underline 
-                      hover:text-[#7edb44]"
-                    target="_blank"
-                  >
-                    Direct Download Link
-                  </a>
+
+                  {/* What Happens After Recognition? Card */}
+                  <div className="p-10 md:p-14 bg-white rounded-[2.5rem] border border-gray-100 shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+                    <div className="flex flex-col items-center text-center">
+                      <h3 className="text-2xl md:text-4xl font-black text-[#003456] mb-4 uppercase tracking-tighter">
+                        What Happens After Recognition?
+                      </h3>
+                      <p className="text-lg md:text-xl text-gray-500 font-bold italic mb-8">
+                        Recognition is clarity. Activation is structure.
+                      </p>
+                      
+                      <div className="w-full h-px bg-gray-100 mb-8"></div>
+                      
+                      <div className="space-y-6 w-full max-w-md">
+                        <div className="flex flex-col items-center">
+                          <span className="inline-block px-4 py-1.5 rounded-full bg-[#003456] text-white text-[10px] font-black uppercase tracking-[0.2em] mb-4">
+                            Stage 02 — Activation
+                          </span>
+                          <h4 className="text-xl font-black text-[#003456] uppercase tracking-tight mb-2">Operating Diagnostic</h4>
+                          <p className="text-gray-500 font-medium leading-relaxed mb-8">
+                            A 10-day structured visibility into how pressure is shaping your leadership rhythm.
+                          </p>
+                        </div>
+                        
+                        <div className="flex flex-col items-center gap-4">
+                          <Link 
+                            to="/activation" 
+                            className="inline-flex items-center text-xl font-black text-[#003456] uppercase tracking-widest hover:text-[#7edb44] transition-colors group"
+                          >
+                            → Explore Activation
+                          </Link>
+                          <p className="text-[10px] font-black text-[#7edb44] uppercase tracking-[0.3em]">
+                            Founding Cohort begins April 6, 2026
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <>
