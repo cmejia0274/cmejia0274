@@ -57,7 +57,7 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Dropdown for How Altitude Works */}
+          {/* Dropdown for The System */}
           <div className="relative dropdown-container group">
             <button 
               className={`text-[9px] sm:text-[10px] md:text-sm font-black uppercase tracking-widest transition-colors whitespace-nowrap flex items-center gap-1 ${
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
                   : 'text-[#003456] group-hover:text-[#7edb44]'
               }`}
             >
-              How It Works
+              THE SYSTEM
               <svg className="w-2 h-2 md:w-3 md:h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
               </svg>
