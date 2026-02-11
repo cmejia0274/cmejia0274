@@ -1,55 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
 const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
   const isOverview = location.pathname === '/overview';
   const isArchitecture = location.pathname === '/architecture';
   const isProcess = location.pathname.includes('/blind-spot') || location.pathname.includes('/activation') || location.pathname.includes('/reset');
 
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-2 md:gap-4">
-        <Link to="/" className="hover:opacity-80 transition-opacity flex-shrink-0">
+      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+        <Link to="/" className="hover:opacity-80 transition-opacity flex-shrink-0" onClick={() => setIsOpen(false)}>
           <Logo className="h-6 md:h-10" showText={true} />
         </Link>
-        <nav className="flex items-center gap-2 sm:gap-4 md:gap-8">
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
           <Link 
             to="/" 
-            className={`text-[9px] sm:text-[10px] md:text-sm font-black uppercase tracking-widest transition-colors whitespace-nowrap ${
-              isHome 
-                ? 'text-[#7edb44]' 
-                : 'text-[#003456] hover:text-[#7edb44]'
+            className={`text-sm font-black uppercase tracking-widest transition-colors ${
+              isHome ? 'text-[#7edb44]' : 'text-[#003456] hover:text-[#7edb44]'
             }`}
           >
             Home
           </Link>
 
-          {/* "The Process" now links directly to Blind Spot */}
           <Link 
             to="/blind-spot" 
-            className={`text-[9px] sm:text-[10px] md:text-sm font-black uppercase tracking-widest transition-colors whitespace-nowrap ${
-              isProcess 
-                ? 'text-[#7edb44]' 
-                : 'text-[#003456] hover:text-[#7edb44]'
+            className={`text-sm font-black uppercase tracking-widest transition-colors ${
+              isProcess ? 'text-[#7edb44]' : 'text-[#003456] hover:text-[#7edb44]'
             }`}
           >
             The Process
           </Link>
 
-          {/* Dropdown for The System */}
+          {/* Dropdown for THE SYSTEM */}
           <div className="relative dropdown-container group">
             <button 
-              className={`text-[9px] sm:text-[10px] md:text-sm font-black uppercase tracking-widest transition-colors whitespace-nowrap flex items-center gap-1 ${
-                (isOverview || isArchitecture)
-                  ? 'text-[#7edb44]' 
-                  : 'text-[#003456] group-hover:text-[#7edb44]'
+              className={`text-sm font-black uppercase tracking-widest transition-colors flex items-center gap-1 ${
+                (isOverview || isArchitecture) ? 'text-[#7edb44]' : 'text-[#003456] group-hover:text-[#7edb44]'
               }`}
             >
               THE SYSTEM
-              <svg className="w-2 h-2 md:w-3 md:h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -68,12 +67,49 @@ const Header: React.FC = () => {
 
           <Link 
             to="/orientation" 
-            className="bg-[#003456] text-white px-2 sm:px-4 md:px-8 py-2 md:py-3 rounded-full text-[8px] sm:text-[9px] md:text-xs font-black hover:shadow-xl hover:scale-105 transition-all active:scale-95 uppercase tracking-widest whitespace-nowrap"
+            className="bg-[#003456] text-white px-8 py-3 rounded-full text-xs font-black hover:shadow-xl hover:scale-105 transition-all active:scale-95 uppercase tracking-widest"
           >
             Orientation
           </Link>
         </nav>
+
+        {/* Mobile Toggle */}
+        <button 
+          className="md:hidden p-2 text-[#003456] hover:bg-gray-50 rounded-lg transition-colors" 
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-t border-gray-100 py-8 px-6 flex flex-col gap-6 shadow-2xl animate-in slide-in-from-top duration-300">
+          <Link to="/" className={`text-lg font-black uppercase tracking-widest ${isHome ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
+            Home
+          </Link>
+          <Link to="/blind-spot" className={`text-lg font-black uppercase tracking-widest ${isProcess ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
+            The Process
+          </Link>
+          <div className="h-px bg-gray-100 my-2"></div>
+          <Link to="/overview" className={`text-lg font-black uppercase tracking-widest ${isOverview ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
+            System Overview
+          </Link>
+          <Link to="/architecture" className={`text-lg font-black uppercase tracking-widest ${isArchitecture ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
+            Architecture
+          </Link>
+          <div className="pt-4">
+            <Link 
+              to="/orientation" 
+              className="bg-[#003456] text-white py-4 rounded-xl text-center text-sm font-black uppercase tracking-widest block" 
+              onClick={toggleMenu}
+            >
+              Orientation
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

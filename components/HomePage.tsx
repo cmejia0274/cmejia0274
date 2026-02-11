@@ -49,12 +49,12 @@ const HomePage: React.FC = () => {
 
         <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
           <div className="space-y-16">
-            <h1 className="text-4xl md:text-7xl font-black leading-[1.05] tracking-tighter">
+            <h1 className="text-4xl md:text-7xl font-black leading-[1.05] tracking-tighter reveal">
               Your company is running. <br />
               <span className="text-[#7edb44]">But something isn’t tracking.</span>
             </h1>
 
-            <div className="space-y-6">
+            <div className="space-y-6 reveal" style={{ transitionDelay: '200ms' }}>
               <div className="text-xl md:text-2xl font-bold text-gray-400 space-y-2 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8 italic">
                 <p>Strategy exists.</p>
                 <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -97,9 +97,8 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* The Pattern Section - Re-centered Layout */}
+      {/* The Pattern Section */}
       <section className="py-16 md:py-32 bg-[#fcfcfc] border-y border-gray-100 relative overflow-hidden">
-        {/* Subtle Visual Distortion Background */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <line x1="-10%" y1="20%" x2="110%" y2="25%" stroke="#003456" strokeWidth="0.5" />
@@ -111,7 +110,7 @@ const HomePage: React.FC = () => {
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <div className="space-y-16">
-            <div className="space-y-6 flex flex-col items-center">
+            <div className="space-y-6 flex flex-col items-center reveal">
               <span className="inline-block px-4 py-1 rounded-full bg-[#003456] text-white text-[10px] font-black uppercase tracking-[0.3em]">
                 System Distortion
               </span>
@@ -124,7 +123,7 @@ const HomePage: React.FC = () => {
               <div className="h-1 w-24 bg-[#7edb44]"></div>
             </div>
 
-            <div className="text-xl md:text-2xl font-medium text-gray-600 leading-relaxed space-y-12">
+            <div className="text-xl md:text-2xl font-medium text-gray-600 leading-relaxed space-y-12 reveal" style={{ transitionDelay: '200ms' }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-12 border-y border-gray-200 text-left">
                 <div className="space-y-6">
                   <p className="text-lg md:text-xl font-black uppercase tracking-[0.3em] text-[#7edb44]">WHAT YOU SEE</p>
@@ -150,7 +149,7 @@ const HomePage: React.FC = () => {
                   Instead of correcting it, the organization adapts around it.
                 </p>
 
-                <p className="text-gray-400 max-w-3xl mx-auto italic">
+                <p className="text-gray-400 max-w-3xl mx-auto italic text-sm">
                   The cost compounds. <br className="hidden md:block" />
                   By the time it shows in the numbers, it’s been shaping outcomes for months.
                 </p>
@@ -181,10 +180,10 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Operating Roadmap Section - High-End Consulting Style */}
+      {/* Operating Roadmap Section */}
       <section className="bg-white py-32 md:py-48 border-t border-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-24">
+          <div className="text-center mb-24 reveal">
             <p className="text-sm md:text-base font-black uppercase tracking-[0.5em] text-gray-400 mb-6">OPERATING ROADMAP</p>
             <h2 className="text-4xl md:text-6xl font-black text-[#003456] tracking-tight leading-tight mb-8">
               Operating systems don’t change overnight. <br className="hidden lg:block" />
@@ -198,8 +197,8 @@ const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-0 border border-gray-100 rounded-[3rem] overflow-hidden shadow-2xl">
-            {/* CARD 01 - Prominent Start */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-0 border border-gray-100 rounded-[3rem] overflow-hidden shadow-2xl reveal-scale" style={{ transitionDelay: '200ms' }}>
+            {/* CARD 01 */}
             <div className="p-12 bg-[#7edb44]/5 border-r border-[#7edb44]/20 flex flex-col gap-10 group transition-all duration-500">
               <span className="text-[#7edb44] font-black text-xl tracking-[0.2em]">01</span>
               <div className="space-y-4 flex-grow">
@@ -253,7 +252,7 @@ const HomePage: React.FC = () => {
                 <div className="w-8 h-1 bg-gray-100 group-hover:bg-[#7edb44] transition-all"></div>
                 <p className="text-sm font-bold text-gray-600 leading-relaxed">
                   Rebuild the structural foundations your environment has been compensating for. <br />
-                  30-day structured operating analysis.
+                  30-day recalibration.
                 </p>
               </div>
               <p className="text-[10px] font-black text-gray-300 uppercase tracking-widest italic">Available following Activation findings.</p>
@@ -266,17 +265,25 @@ const HomePage: React.FC = () => {
                 <h3 className="text-2xl font-black text-[#003456] uppercase tracking-tighter leading-none">
                   ALTITUDE
                 </h3>
-                <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">Executive Operating System Installation</p>
+                <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">Operating System Installation</p>
                 <div className="w-8 h-1 bg-gray-100 group-hover:bg-[#7edb44] transition-all"></div>
                 <p className="text-sm font-bold text-gray-600 leading-relaxed">
                   Install durable cadence, decision architecture, and executive rhythm.
                 </p>
+                {/* Embedded system chart visual for context when Altitude OS is referenced */}
+                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0">
+                  <img 
+                    src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/altitude-executive-operating-system-chart-OUlJfLN0EWEDi1HW.png" 
+                    alt="Altitude OS Architecture" 
+                    className="w-full h-auto rounded-xl border border-gray-100 shadow-sm"
+                  />
+                </div>
               </div>
               <p className="text-[10px] font-black text-gray-300 uppercase tracking-widest italic">Organizational readiness required.</p>
             </div>
           </div>
 
-          <div className="mt-20 text-center space-y-6">
+          <div className="mt-20 text-center space-y-6 reveal">
             <p className="text-xl md:text-2xl font-black text-[#003456] tracking-tight">
               Most organizations attempt Stage 04 first. <br className="md:hidden" />
               <span className="text-[#7edb44]">That’s why they cycle.</span>
@@ -288,9 +295,8 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Approach Summary - Abstract Elevation */}
+      {/* Approach Summary */}
       <section className="py-32 md:py-48 relative overflow-hidden bg-[#003456]">
-        {/* Abstract Architectural Image Background */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <img 
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070" 
@@ -301,18 +307,18 @@ const HomePage: React.FC = () => {
         
         <div className="max-w-5xl mx-auto px-6 relative z-10 text-center text-white">
           <div className="space-y-12">
-            <p className="text-2xl md:text-5xl font-black tracking-tighter leading-tight">
+            <p className="text-2xl md:text-5xl font-black tracking-tighter leading-tight reveal">
               Altitude closes the loop most organizations leave open — between how leaders decide, how teams execute, and how outcomes are governed over time.
             </p>
             
-            <div className="space-y-4">
+            <div className="space-y-4 reveal" style={{ transitionDelay: '200ms' }}>
               <p className="text-xl md:text-2xl font-medium text-gray-400 italic">
                 We begin by recognizing patterns — not assumptions.
               </p>
               <div className="h-1 w-24 bg-[#7edb44] mx-auto rounded-full opacity-50"></div>
             </div>
 
-            <div className="space-y-12 pt-8">
+            <div className="space-y-12 pt-8 reveal" style={{ transitionDelay: '400ms' }}>
               <p className="text-xl md:text-3xl font-black text-white tracking-tight leading-none">
                 Resonance is the first step. <br />
                 <span className="text-[#7edb44]">Validate the signal.</span>

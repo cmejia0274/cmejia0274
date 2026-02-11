@@ -5,9 +5,9 @@ import Logo from './Logo';
 const Footer: React.FC = () => {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Overview", href: "/overview" },
-    { name: "The Architecture", href: "/architecture" },
-    { name: "Request Orientation", href: "/orientation" }
+    { name: "The Process", href: "/blind-spot" },
+    { name: "The System", href: "/overview" },
+    { name: "Orientation", href: "/orientation" }
   ];
 
   const legalLinks = [
