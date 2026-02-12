@@ -95,18 +95,6 @@ const JointActivationAccess: React.FC = () => {
             </div>
           </div>
 
-          {/* Symmetrical System Chart Addition */}
-          <div className="py-12 reveal">
-            <p className="text-sm font-black text-gray-400 uppercase tracking-[0.3em] text-center mb-8">Altitude Operating System Architecture</p>
-            <div className="relative p-6 md:p-12 bg-white rounded-[3rem] border border-gray-100 shadow-xl overflow-hidden">
-               <img 
-                 src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/altitude-executive-operating-system-chart-OUlJfLN0EWEDi1HW.png" 
-                 alt="Altitude Operating System Architecture" 
-                 className="w-full h-auto rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
-               />
-            </div>
-          </div>
-
           <div className="text-xl md:text-2xl text-[#003456] font-medium leading-relaxed space-y-8">
             <p className="text-gray-500 italic font-medium">
               This isn’t an evaluation of performance. It isn’t a feedback exercise. And it isn’t about improving communication. The work is observational by design. Awareness comes from noticing what’s already happening, not from trying to correct it in real time.
