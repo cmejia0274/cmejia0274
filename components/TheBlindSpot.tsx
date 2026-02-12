@@ -432,13 +432,13 @@ const TheBlindSpot: React.FC = () => {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center reveal">
           <p className="text-[#9ea7ae] font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-8">
-            PHASE 01 COMPLETE?
+            STAGE 01 COMPLETE?
           </p>
           <Link 
             to="/activation" 
-            className="text-2xl md:text-4xl font-black text-[#003456] underline decoration-2 underline-offset-[12px] hover:text-[#7edb44] hover:decoration-[#7edb44] transition-all inline-flex items-center"
+            className="text-2xl md:text-3xl font-black text-[#003456] underline decoration-2 underline-offset-[12px] hover:text-[#7edb44] hover:decoration-[#7edb44] transition-all inline-flex items-center"
           >
-            Move to Phase 02: Activation →
+            Move to Stage 02: Activation →
           </Link>
         </div>
       </section>

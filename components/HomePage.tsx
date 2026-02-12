@@ -214,7 +214,7 @@ const HomePage: React.FC = () => {
                 to="/activation" 
                 className="text-xs font-bold text-[#003456] uppercase tracking-widest flex items-center gap-2 hover:opacity-70 transition-opacity"
               >
-                Founding Activation Cohort — Now Open <span className="text-[#7edb44]">→</span>
+                Founding Activation Scan — Now Open <span className="text-[#7edb44]">→</span>
               </Link>
             </div>
 
@@ -225,7 +225,7 @@ const HomePage: React.FC = () => {
                 <h3 className="text-2xl font-black text-[#003456] uppercase tracking-tighter leading-none">
                   RESET
                 </h3>
-                <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">Operating Recalibration</p>
+                <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">Structural  Recalibration</p>
                 <div className="w-8 h-1 bg-gray-100 group-hover:bg-[#7edb44] transition-all"></div>
                 <p className="text-sm font-bold text-gray-600 leading-relaxed">
                   Rebuild the structural foundations your environment has been compensating for. <br />

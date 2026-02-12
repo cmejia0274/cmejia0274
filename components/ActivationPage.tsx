@@ -11,7 +11,7 @@ const ActivationPage: React.FC = () => {
       <section className="pt-24 pb-16 border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-6 reveal text-center">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#003456] text-white text-xs font-black uppercase tracking-[0.3em] mb-8">
-            THE PROCESS - THE READINESS
+            THE PROCESS - THE DIAGNOSTIC
           </span>
           <h1 className="text-4xl md:text-7xl font-black text-[#003456] mb-8 tracking-tighter leading-tight">
             Activation
@@ -125,14 +125,14 @@ const ActivationPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-6 reveal">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black text-[#003456] mb-4 uppercase tracking-tight">What You Receive</h2>
-            <p className="text-xl text-gray-600 font-medium italic">Baseline Operating Snapshot (2–3 pages)</p>
+            <p className="text-xl text-gray-600 font-medium italic">Baseline Operating Snapshot (Executive Brief | 2–3 pages)</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
              {[
-               "Operating Pattern Summary",
+               "Operating Pattern Profile",
                "Compensation Map",
-               "Primary Constraint(s)",
-               "Readiness Signal"
+               "Primary Structural Constraint(s)",
+               "Readiness Signal"               
              ].map((item, i) => (
                <div key={i} className="p-10 bg-gray-50 rounded-2xl border border-gray-100 text-center flex flex-col items-center justify-center">
                  <span className="text-[#7edb44] font-black text-xl block mb-3">0{i+1}</span>
@@ -278,7 +278,7 @@ const ActivationPage: React.FC = () => {
                </div>
                <p className="mt-8 text-xs font-black text-gray-400 uppercase tracking-[0.2em] leading-relaxed">
                  ✓ 100% credited forward <br />
-                 ✓ No obligation to proceed <br />
+                 ✓ No obligation to proceed to next stage<br />
                  ✓ Founding rates apply to this window only
                </p>
             </div>
@@ -304,7 +304,7 @@ const ActivationPage: React.FC = () => {
           {/* Final CTA */}
           <div className="p-14 md:p-24 bg-gray-50 rounded-[4rem] text-center border border-gray-100 shadow-sm">
             <h2 className="text-4xl md:text-6xl font-black text-[#003456] mb-8 uppercase tracking-tighter">Begin Activation</h2>
-            <p className="text-xl text-gray-500 font-bold mb-14 italic max-w-2xl mx-auto">30 minutes per day. 7 days. Willingness to observe without fixing.</p>
+            <p className="text-xl text-gray-500 font-bold mb-14 italic max-w-2xl mx-auto">30 minutes per day. 7 lenses. Willingness to observe without fixing.</p>
             <div className="flex flex-col md:flex-row justify-center gap-6 items-center">
                <a 
                  href={soloStripeLink}
@@ -312,7 +312,7 @@ const ActivationPage: React.FC = () => {
                  rel="noopener noreferrer"
                  className="w-full md:w-auto px-16 py-7 bg-[#003456] text-white font-black text-2xl rounded-full hover:scale-105 transition-all shadow-xl active:scale-95 text-center block"
                >
-                 Solo Activation — $247
+                 Solo Activation  $247
                </a>
                <a 
                  href={jointStripeLink}
@@ -320,7 +320,7 @@ const ActivationPage: React.FC = () => {
                  rel="noopener noreferrer"
                  className="w-full md:w-auto px-16 py-7 bg-[#7edb44] text-[#003456] font-black text-2xl rounded-full hover:scale-105 transition-all shadow-xl active:scale-95 text-center block"
                >
-                 Joint Activation — $397
+                 Joint Activation  $397
                </a>
             </div>
             <p className="mt-12 text-xs font-black text-gray-400 uppercase tracking-[0.3em]">
