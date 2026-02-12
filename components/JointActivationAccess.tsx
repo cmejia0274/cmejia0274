@@ -130,8 +130,13 @@ const JointActivationAccess: React.FC = () => {
             </p>
 
             <div className="pt-12 text-center">
-              <p className="text-2xl font-black text-[#003456] uppercase tracking-tighter">You’ll hear from us soon.</p>
-              <div className="mt-8">
+              <div className="space-y-4">
+                <p className="text-2xl font-black text-[#003456] uppercase tracking-tighter">A detailed access briefing will be sent before April 6.</p>
+                <p className="text-sm font-bold text-gray-400 uppercase tracking-widest leading-relaxed">
+                  If you do not receive it by April 5, contact <a href="mailto:consult@ikigai-edge.com" className="text-[#003456] underline hover:text-[#7edb44] transition-colors">consult@ikigai-edge.com</a>
+                </p>
+              </div>
+              <div className="mt-12">
                  <Link to="/" className="text-xs font-black text-gray-400 uppercase tracking-widest hover:text-[#003456] transition-colors">Return to Homepage</Link>
               </div>
             </div>
