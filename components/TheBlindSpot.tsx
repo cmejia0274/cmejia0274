@@ -106,8 +106,9 @@ const TheBlindSpot: React.FC = () => {
       {/* Narrative Section */}
       <section className="py-24 bg-[#fcfcfc]">
         <div className="max-w-3xl mx-auto px-6 text-lg md:text-xl 
-          text-[#003456] font-medium leading-relaxed space-y-12 reveal">
-          <div>
+          text-[#003456] font-medium leading-relaxed space-y-24">
+          
+          <div className="reveal">
             <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase 
               tracking-tight">When Leadership Becomes Survival</h2>
             <p className="mb-6">At some point, it stops being about shaping the 
@@ -125,7 +126,7 @@ const TheBlindSpot: React.FC = () => {
           </div>
 
           <div className="p-12 bg-white rounded-[3rem] shadow-xl border 
-            border-gray-100">
+            border-gray-100 reveal">
             <h2 className="text-2xl font-black mb-6 uppercase 
               tracking-tight">The Green Arrows in the Board Deck</h2>
             <p className="text-gray-500 mb-8">They still appear. But everyone 
@@ -147,7 +148,7 @@ const TheBlindSpot: React.FC = () => {
               afford.</p>
           </div>
 
-          <div>
+          <div className="reveal">
             <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase 
               tracking-tight">When the Cost Moves Instead of Disappearing</h2>
             <p className="mb-6">The leaders caught inside this pattern aren't 
@@ -174,7 +175,7 @@ const TheBlindSpot: React.FC = () => {
           </div>
 
           <div className="bg-[#003456] text-white p-12 rounded-[3rem] 
-            shadow-2xl relative overflow-hidden">
+            shadow-2xl relative overflow-hidden reveal">
              <div className="absolute top-0 right-0 w-64 h-64 
               bg-[#7edb44]/10 rounded-full blur-3xl translate-x-1/2 
               -translate-y-1/2"></div>
@@ -306,7 +307,7 @@ const TheBlindSpot: React.FC = () => {
                         Stage 02 — Activation
                       </span>
                       <p className="text-gray-500 font-medium leading-relaxed">
-                        A 10-day structured visibility into how pressure is shaping your leadership rhythm.
+                        A Brief structured visibility into how pressure is shaping your leadership rhythm.
                       </p>
                     </div>
                   </div>

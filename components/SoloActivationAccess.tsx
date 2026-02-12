@@ -37,7 +37,7 @@ const SoloActivationAccess: React.FC = () => {
             </p>
 
             <p>
-              There’s nothing to prepare and nothing to perform. Over the next ten days, you’ll be asked to notice how decisions get made, where attention goes, and what gets quietly deferred when urgency takes over. The work is brief, structured, and intentionally simple. 
+              There’s nothing to prepare and nothing to perform. Over a brief period, you’ll be asked to notice how decisions get made, where attention goes, and what gets quietly deferred when urgency takes over. The work is brief, structured, and intentionally simple. 
               <span className="text-[#7edb44] font-black uppercase tracking-tight block mt-4">The value comes from observation, not effort.</span>
             </p>
           </div>
@@ -97,6 +97,18 @@ const SoloActivationAccess: React.FC = () => {
             </div>
           </div>
 
+          {/* Symmetrical System Chart Addition */}
+          <div className="py-12 reveal">
+            <p className="text-sm font-black text-gray-400 uppercase tracking-[0.3em] text-center mb-8">Altitude Operating System Architecture</p>
+            <div className="relative p-6 md:p-12 bg-white rounded-[3rem] border border-gray-100 shadow-xl overflow-hidden">
+               <img 
+                 src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/altitude-executive-operating-system-chart-OUlJfLN0EWEDi1HW.png" 
+                 alt="Altitude Operating System Architecture" 
+                 className="w-full h-auto rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
+               />
+            </div>
+          </div>
+
           <div className="text-xl md:text-2xl text-[#003456] font-medium leading-relaxed space-y-8">
             <p>
               Between now and then, you don’t need to change your calendar, your workflow, or your behavior. In fact, the more normally you operate, the more useful this will be. Instructions and your starting prompt will be sent prior to the access date.
@@ -124,7 +136,7 @@ const SoloActivationAccess: React.FC = () => {
             </p>
 
             <p className="font-black border-l-4 border-[#7edb44] pl-6 py-2">
-              There is nothing to fix during these ten days. The work stands on its own. What comes next, if anything, is optional.
+              There is nothing to fix during this brief period. The work stands on its own. What comes next, if anything, is optional.
             </p>
 
             <div className="pt-12 text-center">

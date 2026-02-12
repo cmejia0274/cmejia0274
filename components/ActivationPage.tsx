@@ -31,7 +31,7 @@ const ActivationPage: React.FC = () => {
             Activation is the mandatory entry point into this work.
           </p>
           <p className="text-gray-700">
-            A 10-day diagnostic baseline designed to surface how execution actually works — not how it's intended to work, not how it looks on paper, not how it's described in meetings.
+            A Brief diagnostic baseline designed to surface how execution actually works — not how it's intended to work, not how it looks on paper, not how it's described in meetings.
           </p>
           <p className="text-gray-500 italic font-bold">
             This is where urgency slows down long enough for clarity to emerge.
@@ -88,8 +88,63 @@ const ActivationPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Choose Your Path */}
-      <section className="py-24 bg-white">
+      {/* How it Works - The Inputs */}
+      <section className="py-24 bg-[#fcfcfc] border-y border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 reveal">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-[#003456] mb-4 uppercase tracking-tight">How Activation Works</h2>
+            <p className="text-xl text-gray-500 font-bold italic">Total duration: Brief • commitment: (7 lenses) ideally to be completed in &lt; 14 days</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[
+              { num: "01", title: "Reaction Journal", sub: "Urgency and response patterns" },
+              { num: "02", title: "Calendar Reality", sub: "Where time actually goes" },
+              { num: "03", title: "Foundation Test", sub: "What exists vs what substitutes" },
+              { num: "04", title: "Compensation Map", sub: "Where people carry hidden load" },
+              { num: "05", title: "Tempo Snapshot", sub: "Pace, deferral, and rebuilds" },
+              { num: "06", title: "Optics Snapshot", sub: "Health signals vs reality" },
+              { num: "07", title: "Forward Risk", sub: "What breaks if nothing changes" },
+              { num: "Snapshot", title: "The Result", sub: "Final integrated analysis", highlight: true }
+            ].map((lens, i) => (
+              <div key={i} className={`p-8 rounded-2xl border transition-all ${lens.highlight ? 'bg-[#003456] text-white border-[#003456] shadow-xl' : 'bg-white border-gray-100 text-[#003456]'}`}>
+                <p className={`text-xs font-black uppercase tracking-widest mb-3 ${lens.highlight ? 'text-[#7edb44]' : 'text-gray-400'}`}>Lens {lens.num}</p>
+                <p className="font-black text-base uppercase mb-2 leading-tight">{lens.title}</p>
+                <p className={`text-sm leading-relaxed font-medium ${lens.highlight ? 'text-white/70' : 'text-gray-500'}`}>{lens.sub}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xl font-bold italic text-gray-400">
+            "Nothing is fixed during Activation. That restraint is intentional."
+          </p>
+        </div>
+      </section>
+
+      {/* What You Receive */}
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-6 reveal">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-[#003456] mb-4 uppercase tracking-tight">What You Receive</h2>
+            <p className="text-xl text-gray-600 font-medium italic">Baseline Operating Snapshot (2–3 pages)</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+             {[
+               "Operating Pattern Summary",
+               "Compensation Map",
+               "Primary Constraint(s)",
+               "Readiness Signal"
+             ].map((item, i) => (
+               <div key={i} className="p-10 bg-gray-50 rounded-2xl border border-gray-100 text-center flex flex-col items-center justify-center">
+                 <span className="text-[#7edb44] font-black text-xl block mb-3">0{i+1}</span>
+                 <p className="text-sm font-black text-[#003456] uppercase tracking-tight leading-snug">{item}</p>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Choose Your Path (Moved here) */}
+      <section className="py-24 bg-white border-t border-gray-50">
         <div className="max-w-6xl mx-auto px-6 reveal">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#003456] mb-6 uppercase tracking-tight">Choose Your Path</h2>
@@ -111,7 +166,7 @@ const ActivationPage: React.FC = () => {
                 <p className="text-base text-gray-600 font-bold mt-4 leading-relaxed">For: Executive Leaders, Chiefs of Staff, or senior operators activating independently</p>
               </div>
               <ul className="space-y-5 mb-10 flex-grow text-base md:text-lg font-medium text-gray-700">
-                <li className="flex gap-3"><span className="text-[#7edb44] font-black">✓</span> One individual completes the 10-day diagnostic</li>
+                <li className="flex gap-3"><span className="text-[#7edb44] font-black">✓</span> One individual completes the Brief diagnostic</li>
                 <li className="flex gap-3"><span className="text-[#7edb44] font-black">✓</span> One Baseline Operating Snapshot is produced</li>
                 <li className="flex gap-3"><span className="text-[#7edb44] font-black">✓</span> Outcomes determined based on individual signal</li>
               </ul>
@@ -167,61 +222,6 @@ const ActivationPage: React.FC = () => {
           <p className="text-center text-base font-bold text-gray-500 uppercase tracking-widest italic">
             "Why is Joint Activation only $150 more? Because the diagnostic value compounds when we see both lenses."
           </p>
-        </div>
-      </section>
-
-      {/* How it Works - The Inputs */}
-      <section className="py-24 bg-[#fcfcfc] border-y border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 reveal">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-[#003456] mb-4 uppercase tracking-tight">How Activation Works</h2>
-            <p className="text-xl text-gray-500 font-bold italic">Total duration: 10 days • commitment: ~30 min/day (7 days)</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {[
-              { day: "01", title: "Reaction Journal", sub: "Urgency and response patterns" },
-              { day: "02", title: "Calendar Reality", sub: "Where time actually goes" },
-              { day: "03", title: "Foundation Test", sub: "What exists vs what substitutes" },
-              { day: "04", title: "Compensation Map", sub: "Where people carry hidden load" },
-              { day: "05", title: "Tempo Snapshot", sub: "Pace, deferral, and rebuilds" },
-              { day: "06", title: "Optics Snapshot", sub: "Health signals vs reality" },
-              { day: "07", title: "Forward Risk", sub: "What breaks if nothing changes" },
-              { day: "Snapshot", title: "The Result", sub: "Final integrated analysis", highlight: true }
-            ].map((day, i) => (
-              <div key={i} className={`p-8 rounded-2xl border transition-all ${day.highlight ? 'bg-[#003456] text-white border-[#003456] shadow-xl' : 'bg-white border-gray-100 text-[#003456]'}`}>
-                <p className={`text-xs font-black uppercase tracking-widest mb-3 ${day.highlight ? 'text-[#7edb44]' : 'text-gray-400'}`}>Day {day.day}</p>
-                <p className="font-black text-base uppercase mb-2 leading-tight">{day.title}</p>
-                <p className={`text-sm leading-relaxed font-medium ${day.highlight ? 'text-white/70' : 'text-gray-500'}`}>{day.sub}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xl font-bold italic text-gray-400">
-            "Nothing is fixed during Activation. That restraint is intentional."
-          </p>
-        </div>
-      </section>
-
-      {/* What You Receive */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 reveal">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-[#003456] mb-4 uppercase tracking-tight">What You Receive</h2>
-            <p className="text-xl text-gray-600 font-medium italic">Baseline Operating Snapshot (2–3 pages)</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-             {[
-               "Operating Pattern Summary",
-               "Compensation Map",
-               "Primary Constraint(s)",
-               "Readiness Signal"
-             ].map((item, i) => (
-               <div key={i} className="p-10 bg-gray-50 rounded-2xl border border-gray-100 text-center flex flex-col items-center justify-center">
-                 <span className="text-[#7edb44] font-black text-xl block mb-3">0{i+1}</span>
-                 <p className="text-sm font-black text-[#003456] uppercase tracking-tight leading-snug">{item}</p>
-               </div>
-             ))}
-          </div>
         </div>
       </section>
 

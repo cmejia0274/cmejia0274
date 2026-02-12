@@ -14,6 +14,7 @@ import ActivationPage from './components/ActivationPage';
 import TheResetPage from './components/TheResetPage';
 import SoloActivationAccess from './components/SoloActivationAccess';
 import JointActivationAccess from './components/JointActivationAccess';
+import TopBanner from './components/TopBanner';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -25,6 +26,7 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   const location = useLocation();
+  const isAccessPage = location.pathname === '/access-solo' || location.pathname === '/access-joint';
 
   useEffect(() => {
     const observerOptions = {
@@ -52,6 +54,7 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-[#fefefe]">
       <ScrollToTop />
       <Header />
+      {!isAccessPage && <TopBanner />}
       
       <main className="flex-grow">
         <Routes>
