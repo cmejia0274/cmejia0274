@@ -93,7 +93,13 @@ const ActivationPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-6 reveal">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#003456] mb-6 uppercase tracking-tight">Choose Your Path</h2>
-            <p className="text-gray-500 font-medium italic text-xl">Activation can be completed solo or jointly. Both paths are rigorous.</p>
+            <div className="space-y-4">
+              <p className="text-gray-500 font-medium italic text-xl">Activation can be completed solo or jointly.</p>
+              <div className="space-y-1">
+                <p className="text-[#003456] font-black uppercase tracking-[0.1em] text-sm">FOUNDING RATE CLOSES APRIL 3, 2026</p>
+                <p className="text-gray-400 font-bold uppercase tracking-[0.15em] text-[10px]">Access opens April 6. Begin anytime thereafter.</p>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
@@ -144,7 +150,7 @@ const ActivationPage: React.FC = () => {
               <div className="pt-8 border-t border-white/10">
                 <div className="mb-6">
                   <p className="text-5xl font-black text-white">$397 <span className="text-base font-normal text-white/40 italic lowercase">total for both</span></p>
-                  <p className="text-xs font-black text-white/40 uppercase tracking-widest mt-2">Founding Rate | Standard: TBD</p>
+                  <p className="text-xs font-black text-white/40 uppercase tracking-widest mt-2">Founding Rate | Standard: $847</p>
                 </div>
                 <a 
                   href={jointStripeLink}
@@ -256,7 +262,10 @@ const ActivationPage: React.FC = () => {
             </div>
             <div className="bg-[#fcfcfc] p-10 md:p-14 rounded-[2rem] border border-gray-100 shadow-sm">
                <h3 className="text-2xl font-black text-[#003456] mb-6 uppercase tracking-tight">Investment & Timing</h3>
-               <p className="text-sm font-black text-gray-400 uppercase tracking-widest mb-8">Next window: April 3, 2026</p>
+               <div className="mb-8">
+                 <p className="text-sm font-black text-[#003456] uppercase tracking-[0.1em] mb-1">FOUNDING RATE CLOSES APRIL 3, 2026</p>
+                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.15em]">Access opens April 6. Begin anytime thereafter.</p>
+               </div>
                <div className="space-y-6 mb-8">
                   <div className="flex justify-between border-b border-gray-200 pb-3 text-lg">
                     <span className="font-bold text-gray-700">Solo Activation</span>
