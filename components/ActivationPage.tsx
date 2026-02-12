@@ -5,11 +5,33 @@ const ActivationPage: React.FC = () => {
   const soloStripeLink = "https://buy.stripe.com/fZu3cuawZb5wffq5Y04c800";
   const jointStripeLink = "https://buy.stripe.com/9B6fZg6gJ3D44AM7244c801";
 
+  const outcomes = [
+    {
+      title: "Operating Pattern Profile",
+      desc: "How urgency shapes decisions, tempo, and escalation patterns."
+    },
+    {
+      title: "Compensation Map",
+      desc: "Where people or effort are compensating for structural gaps."
+    },
+    {
+      title: "Primary Structural Constraint(s)",
+      desc: "The constraint that defines your system’s current ceiling."
+    },
+    {
+      title: "Readiness Signal",
+      desc: "Whether your system needs repair or is ready for redesign."
+    }
+  ];
+
   return (
     <div className="bg-white min-h-screen pb-24">
       {/* Editorial Header */}
       <section className="pt-24 pb-16 border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-6 reveal text-center">
+          <div className="flex justify-center mb-10">
+            <Logo className="h-12 md:h-16" showText={false} />
+          </div>
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#003456] text-white text-xs font-black uppercase tracking-[0.3em] mb-8">
             THE PROCESS - THE DIAGNOSTIC
           </span>
@@ -122,21 +144,17 @@ const ActivationPage: React.FC = () => {
 
       {/* What You Receive */}
       <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 reveal">
+        <div className="max-w-6xl mx-auto px-6 reveal">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black text-[#003456] mb-4 uppercase tracking-tight">What You Receive</h2>
             <p className="text-xl text-gray-600 font-medium italic">Baseline Operating Snapshot (Executive Brief | 2–3 pages)</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-             {[
-               "Operating Pattern Profile",
-               "Compensation Map",
-               "Primary Structural Constraint(s)",
-               "Readiness Signal"               
-             ].map((item, i) => (
-               <div key={i} className="p-10 bg-gray-50 rounded-2xl border border-gray-100 text-center flex flex-col items-center justify-center">
-                 <span className="text-[#7edb44] font-black text-xl block mb-3">0{i+1}</span>
-                 <p className="text-sm font-black text-[#003456] uppercase tracking-tight leading-snug">{item}</p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+             {outcomes.map((item, i) => (
+               <div key={i} className="p-8 bg-gray-50 rounded-2xl border border-gray-100 text-center flex flex-col items-center h-full hover:shadow-lg transition-shadow">
+                 <span className="text-[#7edb44] font-black text-2xl block mb-4">0{i+1}</span>
+                 <p className="text-base font-black text-[#003456] uppercase tracking-tight leading-snug mb-4">{item.title}</p>
+                 <p className="text-sm text-gray-500 font-medium leading-relaxed">{item.desc}</p>
                </div>
              ))}
           </div>
