@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from './components/HomePage';
 import OverviewPage from './components/OverviewPage';
-import TheArchitecturePage from './components/TheArchitecture'; 
+import TheArchitecturePage from './components/TheArchitecture';
 import OrientationPage from './components/OrientationPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
@@ -26,7 +26,11 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   const location = useLocation();
-  const isAccessPage = location.pathname === '/access-solo' || location.pathname === '/access-joint';
+  const isImmediatePage = 
+    location.pathname === '/access-solo' || 
+    location.pathname === '/access-joint' ||
+    location.pathname === '/activation' ||
+    location.pathname === '/blind-spot';
 
   useEffect(() => {
     const observerOptions = {
@@ -45,16 +49,21 @@ const App: React.FC = () => {
     }, observerOptions);
 
     const revealElements = document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right');
-    revealElements.forEach(el => observer.observe(el));
+    
+    if (isImmediatePage) {
+      revealElements.forEach(el => el.classList.add('revealed'));
+    } else {
+      revealElements.forEach(el => observer.observe(el));
+    }
 
     return () => observer.disconnect();
-  }, [location]);
+  }, [location, isImmediatePage]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#fefefe]">
       <ScrollToTop />
       <Header />
-      {!isAccessPage && <TopBanner />}
+      <TopBanner />
       
       <main className="flex-grow">
         <Routes>

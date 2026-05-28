@@ -7,9 +7,11 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const isBlindSpot = location.pathname === '/blind-spot';
+  const isActivation = location.pathname === '/activation';
   const isOverview = location.pathname === '/overview';
   const isArchitecture = location.pathname === '/architecture';
-  const isProcess = location.pathname.includes('/blind-spot') || location.pathname.includes('/activation') || location.pathname.includes('/reset');
+  const isOrientation = location.pathname === '/orientation';
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -28,16 +30,25 @@ const Header: React.FC = () => {
               isHome ? 'text-[#7edb44]' : 'text-[#003456] hover:text-[#7edb44]'
             }`}
           >
-            Home
+            HOME
           </Link>
 
           <Link 
             to="/blind-spot" 
             className={`text-sm font-black uppercase tracking-widest transition-colors ${
-              isProcess ? 'text-[#7edb44]' : 'text-[#003456] hover:text-[#7edb44]'
+              isBlindSpot ? 'text-[#7edb44]' : 'text-[#003456] hover:text-[#7edb44]'
             }`}
           >
-            The Process
+            THE BLIND SPOT
+          </Link>
+
+          <Link 
+            to="/activation" 
+            className={`text-sm font-black uppercase tracking-widest transition-colors ${
+              isActivation ? 'text-[#7edb44]' : 'text-[#003456] hover:text-[#7edb44]'
+            }`}
+          >
+            ACTIVATION
           </Link>
 
           {/* Dropdown for THE SYSTEM */}
@@ -69,7 +80,7 @@ const Header: React.FC = () => {
             to="/orientation" 
             className="bg-[#003456] text-white px-8 py-3 rounded-full text-xs font-black hover:shadow-xl hover:scale-105 transition-all active:scale-95 uppercase tracking-widest"
           >
-            Orientation
+            ORIENTATION
           </Link>
         </nav>
 
@@ -87,17 +98,20 @@ const Header: React.FC = () => {
       {isOpen && (
         <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-t border-gray-100 py-8 px-6 flex flex-col gap-6 shadow-2xl animate-in slide-in-from-top duration-300">
           <Link to="/" className={`text-lg font-black uppercase tracking-widest ${isHome ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
-            Home
+            HOME
           </Link>
-          <Link to="/blind-spot" className={`text-lg font-black uppercase tracking-widest ${isProcess ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
-            The Process
+          <Link to="/blind-spot" className={`text-lg font-black uppercase tracking-widest ${isBlindSpot ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
+            THE BLIND SPOT
+          </Link>
+          <Link to="/activation" className={`text-lg font-black uppercase tracking-widest ${isActivation ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
+            ACTIVATION
           </Link>
           <div className="h-px bg-gray-100 my-2"></div>
           <Link to="/overview" className={`text-lg font-black uppercase tracking-widest ${isOverview ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
-            System Overview
+            SYSTEM OVERVIEW
           </Link>
           <Link to="/architecture" className={`text-lg font-black uppercase tracking-widest ${isArchitecture ? 'text-[#7edb44]' : 'text-[#003456]'}`} onClick={toggleMenu}>
-            Architecture
+            ARCHITECTURE
           </Link>
           <div className="pt-4">
             <Link 
@@ -105,7 +119,7 @@ const Header: React.FC = () => {
               className="bg-[#003456] text-white py-4 rounded-xl text-center text-sm font-black uppercase tracking-widest block" 
               onClick={toggleMenu}
             >
-              Orientation
+              ORIENTATION
             </Link>
           </div>
         </div>

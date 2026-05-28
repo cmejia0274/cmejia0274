@@ -24,7 +24,7 @@ const OrientationPage: React.FC = () => {
   return (
     <div className="bg-[#fcfcfc] min-h-screen">
       {/* Hero Header */}
-      <section className="pt-24 pb-16 border-b border-gray-100">
+      <section className="pt-28 md:pt-36 pb-16 border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 text-center reveal">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#7edb44]/10 text-[#003456] text-sm font-black uppercase tracking-[0.2em] mb-6">
             Executive Orientation

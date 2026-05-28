@@ -12,21 +12,14 @@ const TopBanner: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-0">
           <div className="flex items-center">
             <p className="text-[11px] md:text-[13px] font-black uppercase tracking-[0.25em] leading-none">
-              BRIEF OPERATING SCAN
+              EXECUTIVE OPERATING DIAGNOSTIC
             </p>
             <span className="mx-3 md:mx-4 opacity-20 text-lg font-light hidden md:inline">|</span>
           </div>
           
           <div className="flex items-center">
-            <p className="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.15em] text-[#003456]/80 leading-none">
-              Founding Rate — $247
-            </p>
-            <span className="mx-3 md:mx-4 opacity-20 text-lg font-light hidden md:inline">|</span>
-          </div>
-
-          <div className="flex items-center">
-            <p className="text-[9px] md:text-[11px] font-black uppercase tracking-[0.3em] opacity-60 leading-none">
-              OPEN ACCESS APRIL 6, 2026
+            <p className="text-[11px] md:text-[13px] font-black uppercase tracking-[0.25em] text-[#003456] leading-none">
+              FOUNDING RATE — $247
             </p>
           </div>
         </div>
@@ -37,7 +30,7 @@ const TopBanner: React.FC = () => {
             to="/activation" 
             className="group flex items-center gap-2 text-[11px] md:text-[12px] font-black uppercase tracking-[0.25em] text-[#003456] transition-all hover:opacity-70"
           >
-            <span className="underline underline-offset-[6px] decoration-2 decoration-[#003456]/30 group-hover:decoration-[#003456]">LOCK RATE</span>
+            <span className="underline underline-offset-[6px] decoration-2 decoration-[#003456]/30 group-hover:decoration-[#003456]">BEGIN NOW</span>
             <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
           </Link>
         </div>

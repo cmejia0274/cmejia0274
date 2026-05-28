@@ -57,7 +57,7 @@ const TheArchitecturePage: React.FC = () => {
   return (
     <div className="bg-[#fcfcfc]">
       {/* System Chart Section */}
-      <section className="pt-32 pb-20 md:pt-40 bg-white overflow-hidden">
+      <section className="pt-28 md:pt-36 pb-20 bg-white overflow-hidden">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-6xl font-black text-[#003456] mb-12 tracking-tight">

@@ -6,8 +6,8 @@ const TheResetPage: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pb-24">
       {/* Editorial Header */}
-      <section className="pt-24 pb-16 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 reveal text-center">
+      <section className="pt-28 md:pt-36 pb-16 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#8ae4d9] text-[#003456] text-xs font-black uppercase tracking-[0.3em] mb-8">
             THE PROCESS - THE RECALIBRATION
           </span>
@@ -24,7 +24,7 @@ const TheResetPage: React.FC = () => {
 
       {/* Intro Narrative */}
       <section className="py-20 bg-[#fcfcfc]">
-        <div className="max-w-3xl mx-auto px-6 text-xl md:text-2xl text-[#003456] font-medium leading-relaxed space-y-8 reveal">
+        <div className="max-w-3xl mx-auto px-6 text-xl md:text-2xl text-[#003456] font-medium leading-relaxed space-y-8">
           <p className="font-black text-2xl md:text-4xl tracking-tight uppercase border-l-8 border-[#7edb44] pl-8 py-2">
             Reset is a prescribed 30-day recalibration.
           </p>
@@ -39,7 +39,7 @@ const TheResetPage: React.FC = () => {
 
       {/* Why Reset Exists */}
       <section className="py-24 border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-6 reveal">
+        <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl font-black text-[#003456] mb-8 uppercase tracking-tight">Why Reset Exists</h2>
           <p className="text-xl text-gray-600 mb-8">Most organizations don’t struggle because they lack structure. They struggle because:</p>
           <ul className="space-y-6 mb-12">
@@ -63,7 +63,7 @@ const TheResetPage: React.FC = () => {
 
       {/* How it Works - The Four Recalibrations */}
       <section className="py-24 bg-[#fcfcfc] border-y border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 reveal">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black text-[#003456] mb-4 uppercase tracking-tight">How Reset Works</h2>
             <p className="text-xl text-gray-500 font-bold italic">30 days • Private operating console • Structured inputs • System-led guidance</p>
@@ -95,7 +95,7 @@ const TheResetPage: React.FC = () => {
 
       {/* Paired Teams Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6 reveal">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="bg-[#003456] p-16 md:p-24 rounded-[4rem] text-white shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 left-0 w-64 h-64 bg-[#7edb44]/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
              <h2 className="text-3xl md:text-5xl font-black mb-10 uppercase tracking-tight text-[#7edb44]">Reset for Leader + Operator Team</h2>
@@ -130,7 +130,7 @@ const TheResetPage: React.FC = () => {
 
       {/* Artifacts & Delivery */}
       <section className="py-24 bg-[#fcfcfc]">
-        <div className="max-w-5xl mx-auto px-6 reveal">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
             <div>
               <h2 className="text-3xl font-black text-[#003456] mb-8 uppercase tracking-tight">What You Receive</h2>
@@ -165,7 +165,7 @@ const TheResetPage: React.FC = () => {
 
       {/* Investment */}
       <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6 reveal">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="bg-[#fcfcfc] border border-gray-100 rounded-[3rem] p-12 md:p-20 shadow-2xl relative overflow-hidden">
             <h2 className="text-4xl md:text-5xl font-black text-[#003456] mb-10 uppercase tracking-tight text-center">Investment Range</h2>
             <p className="text-xl text-gray-500 font-medium mb-14 text-center italic max-w-2xl mx-auto">Reset is priced as a serious executive recalibration. Activation fee is fully credited forward.</p>
@@ -229,7 +229,7 @@ const TheResetPage: React.FC = () => {
 
       {/* Founding Access & After Reset */}
       <section className="py-24 bg-[#fcfcfc] border-y border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 reveal">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Founding Access */}
             <div className="space-y-8">
@@ -285,7 +285,7 @@ const TheResetPage: React.FC = () => {
 
       {/* Access & Oversight */}
       <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 reveal">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mb-24">
             <div>
               <h3 className="text-3xl font-black text-[#003456] mb-8 uppercase tracking-tight">Access & Oversight</h3>

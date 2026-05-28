@@ -5,7 +5,8 @@ import Logo from './Logo';
 const Footer: React.FC = () => {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "The Process", href: "/blind-spot" },
+    { name: "The Blind Spot", href: "/blind-spot" },
+    { name: "Activation", href: "/activation" },
     { name: "The System", href: "/overview" },
     { name: "Orientation", href: "/orientation" }
   ];

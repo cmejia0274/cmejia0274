@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from './Logo';
 
 const JointActivationAccess: React.FC = () => {
-  const blindSpotPdf = "https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/the-blind-spot-lbhsXob401YUMWiX.pdf";
+  const blindSpotPdf = "https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/the-blind-spot-NNPjY86lXEJaCNnr.pdf";
 
   return (
     <div className="bg-white min-h-screen pb-24">
       {/* Editorial Header */}
       <section className="pt-32 pb-16 border-b border-gray-100 bg-[#fcfcfc]">
-        <div className="max-w-4xl mx-auto px-6 reveal text-center">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#7edb44] text-[#003456] text-[10px] font-black uppercase tracking-[0.3em] mb-8 shadow-sm">
             JOINT ACTIVATION — SECURED
           </span>
@@ -22,7 +21,7 @@ const JointActivationAccess: React.FC = () => {
 
       {/* Main Narrative Content */}
       <section className="py-20">
-        <div className="max-w-3xl mx-auto px-6 space-y-12 reveal">
+        <div className="max-w-3xl mx-auto px-6 space-y-12">
           <div className="text-xl md:text-2xl text-[#003456] font-medium leading-relaxed space-y-8">
             <p className="font-bold italic text-gray-500">
               You’re entering this diagnostic as two leadership roles operating in close proximity, where execution pressure is absorbed, translated, and acted on.
@@ -69,9 +68,9 @@ const JointActivationAccess: React.FC = () => {
               <div className="py-6 border-y border-white/10 space-y-4">
                 <p className="font-black uppercase tracking-widest text-[#7edb44] text-xs">Once complete:</p>
                 <ul className="space-y-3 font-bold">
-                  <li className="flex gap-3 items-center"><span className="text-[#7edb44]">●</span> We review both submissions side-by-side</li>
-                  <li className="flex gap-3 items-center"><span className="text-[#7edb44]">●</span> You receive comparative Operating Snapshots</li>
-                  <li className="flex gap-3 items-center"><span className="text-[#7edb44]">●</span> We meet for a 60-minute joint executive debrief</li>
+                  <li className="flex gap-3 items-center"><span className="text-[#7edb44]">•</span> We review both submissions side-by-side</li>
+                  <li className="flex gap-3 items-center"><span className="text-[#7edb44]">•</span> You receive comparative Operating Snapshots</li>
+                  <li className="flex gap-3 items-center"><span className="text-[#7edb44]">•</span> We meet for a 30-minute joint executive debrief</li>
                 </ul>
               </div>
               
@@ -90,8 +89,27 @@ const JointActivationAccess: React.FC = () => {
             </div>
 
             <div className="pt-8 border-t border-white/10">
-               <p className="text-[#7edb44] font-black text-3xl md:text-4xl tracking-tighter">Access opens April 6, 2026</p>
-               <p className="text-sm font-bold text-white/50 uppercase tracking-widest mt-2">You may begin anytime thereafter.</p>
+               <p className="text-[#7edb44] font-black text-3xl md:text-4xl tracking-tighter">Begin your Activation.</p>
+               <a 
+                 href="https://app.altitude-edge.cloud/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="inline-block text-xl font-black text-white hover:text-[#7edb44] transition-colors mt-4 uppercase tracking-tight"
+               >
+                 👉 Enter Activation →
+               </a>
+            </div>
+          </div>
+
+          {/* Symmetrical System Chart Addition */}
+          <div className="py-12">
+            <p className="text-sm font-black text-gray-400 uppercase tracking-[0.3em] text-center mb-8">Altitude Operating System Architecture</p>
+            <div className="relative p-6 md:p-12 bg-white rounded-[3rem] border border-gray-100 shadow-xl overflow-hidden">
+               <img 
+                 src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/altitude-executive-operating-system-chart-tknUzjjOtH4Wxdxe.png" 
+                 alt="Altitude Operating System Architecture" 
+                 className="w-full h-auto rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
+               />
             </div>
           </div>
 
@@ -101,7 +119,7 @@ const JointActivationAccess: React.FC = () => {
             </p>
 
             <p>
-              Before then, there’s nothing to align, fix, or prepare. Continue operating as you normally do. That’s what allows the diagnostic to surface real patterns rather than idealized ones. Setup instructions and initial prompts will be sent prior to the access date.
+              Before then, there’s nothing to align, fix, or prepare. Continue operating as you normally do. That’s what allows the diagnostic to surface real patterns rather than idealized ones. Setup instructions and initial prompts will be sent immediately.
             </p>
 
             <div className="p-8 md:p-12 border-2 border-dashed border-gray-200 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-8 group">
@@ -125,15 +143,10 @@ const JointActivationAccess: React.FC = () => {
               Not as shared reading or to synchronize interpretation, but as a common lens for recognizing the effects of sustained urgency once they start to show themselves.
             </p>
 
-            <p className="font-black border-l-4 border-[#7edb44] pl-6 py-2">
-              During this brief period, the work is to observe without prematurely resolving, correcting, or reframing what appears. What comes next, if anything, is optional.
-            </p>
-
             <div className="pt-12 text-center">
               <div className="space-y-4">
-                <p className="text-2xl font-black text-[#003456] uppercase tracking-tighter">A detailed access briefing will be sent before April 6.</p>
                 <p className="text-sm font-bold text-gray-400 uppercase tracking-widest leading-relaxed">
-                  If you do not receive it by April 5, contact <a href="mailto:consult@ikigai-edge.com" className="text-[#003456] underline hover:text-[#7edb44] transition-colors">consult@ikigai-edge.com</a>
+                  If questions, contact us at <a href="mailto:consult@ikigai-edge.com" className="text-[#003456] underline hover:text-[#7edb44] transition-colors">consult@ikigai-edge.com</a>
                 </p>
               </div>
               <div className="mt-12">

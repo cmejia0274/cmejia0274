@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from './Logo';
 
 const TheBlindSpot: React.FC = () => {
   const [checks, setChecks] = useState([false, false, false, false]);
@@ -30,12 +29,11 @@ const TheBlindSpot: React.FC = () => {
   };
 
   const triggerDownload = () => {
-    const pdfUrl = "https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/" +
-                   "the-blind-spot-lbhsXob401YUMWiX.pdf";
+    const pdfUrl = "https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/the-blind-spot-NNPjY86lXEJaCNnr.pdf";
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.target = "_blank";
-    link.download = "The_Blind_Spot_Guide.pdf";
+    link.download = "The_Blind_Spot_Book.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -55,7 +53,7 @@ const TheBlindSpot: React.FC = () => {
           fullName: formData.fullName,
           email: formData.email,
           role: formData.role || "Not Specified",
-          source: "The Blind Spot Guide"
+          source: "The Blind Spot Book"
         })
       });
 
@@ -83,8 +81,8 @@ const TheBlindSpot: React.FC = () => {
   return (
     <div className="bg-white">
       {/* Editorial Header */}
-      <section className="pt-24 pb-16 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 reveal text-center">
+      <section className="pt-28 md:pt-36 pb-16 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-block px-4 py-1 rounded-full bg-[#003456] 
             text-white text-[10px] font-black uppercase tracking-[0.3em] mb-8">
             THE PROCESS - THE RECOGNITION
@@ -94,11 +92,33 @@ const TheBlindSpot: React.FC = () => {
             The Blind Spot
           </h1>
           <p className="text-xl md:text-2xl font-bold text-gray-500 italic 
-            mb-12">
-            You're doing exactly what the system rewards. <br 
-              className="hidden md:block" />
-            And it's quietly breaking what you're trying to build.
+            mb-8">
+            Most leaders recognize the Blind Spot. <br className="hidden md:block" />
+            Few are willing to change how they operate inside it.
           </p>
+          <div className="mb-12">
+            <button 
+              onClick={() => {
+                const el = document.getElementById('download-section');
+                if (el) {
+                  const offset = 160; // Header + Banner
+                  const bodyRect = document.body.getBoundingClientRect().top;
+                  const elementRect = el.getBoundingClientRect().top;
+                  const elementPosition = elementRect - bodyRect;
+                  const offsetPosition = elementPosition - offset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              className="inline-flex items-center gap-2 text-sm font-black text-[#003456] uppercase tracking-widest hover:text-[#7edb44] transition-colors group cursor-pointer"
+            >
+              Download The Book 
+              <span className="group-hover:translate-y-1 transition-transform">↓</span>
+            </button>
+          </div>
           <div className="h-1 w-20 bg-[#7edb44] mx-auto rounded-full"></div>
         </div>
       </section>
@@ -108,7 +128,7 @@ const TheBlindSpot: React.FC = () => {
         <div className="max-w-3xl mx-auto px-6 text-lg md:text-xl 
           text-[#003456] font-medium leading-relaxed space-y-24">
           
-          <div className="reveal">
+          <div className="">
             <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase 
               tracking-tight">When Leadership Becomes Survival</h2>
             <p className="mb-6">At some point, it stops being about shaping the 
@@ -126,7 +146,7 @@ const TheBlindSpot: React.FC = () => {
           </div>
 
           <div className="p-12 bg-white rounded-[3rem] shadow-xl border 
-            border-gray-100 reveal">
+            border-gray-100">
             <h2 className="text-2xl font-black mb-6 uppercase 
               tracking-tight">The Green Arrows in the Board Deck</h2>
             <p className="text-gray-500 mb-8">They still appear. But everyone 
@@ -148,7 +168,7 @@ const TheBlindSpot: React.FC = () => {
               afford.</p>
           </div>
 
-          <div className="reveal">
+          <div className="">
             <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase 
               tracking-tight">When the Cost Moves Instead of Disappearing</h2>
             <p className="mb-6">The leaders caught inside this pattern aren't 
@@ -175,7 +195,7 @@ const TheBlindSpot: React.FC = () => {
           </div>
 
           <div className="bg-[#003456] text-white p-12 rounded-[3rem] 
-            shadow-2xl relative overflow-hidden reveal">
+            shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-64 h-64 
               bg-[#7edb44]/10 rounded-full blur-3xl translate-x-1/2 
               -translate-y-1/2"></div>
@@ -207,8 +227,8 @@ const TheBlindSpot: React.FC = () => {
       </section>
 
       {/* Assessment Section with Lead Capture Form */}
-      <section className="py-24 brand-gradient text-white">
-        <div className="max-w-4xl mx-auto px-6 reveal text-center">
+      <section id="download-section" className="py-24 brand-gradient text-white scroll-mt-40">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-black mb-8 tracking-tight">
             Does this sound familiar?
           </h2>
@@ -260,7 +280,7 @@ const TheBlindSpot: React.FC = () => {
             </div>
           )}
 
-          <div id="guide-card" className="bg-white text-[#003456] p-10 md:p-16 rounded-[3rem] 
+          <div className="bg-white text-[#003456] p-10 md:p-16 rounded-[3rem] 
             shadow-2xl text-left">
             <div className="max-w-2xl mx-auto">
               {formStatus === 'success' ? (
@@ -280,11 +300,11 @@ const TheBlindSpot: React.FC = () => {
                     <h4 className="text-2xl font-black mb-2 uppercase 
                       tracking-tight">Success!</h4>
                     <p className="text-gray-600 font-bold italic mb-8">
-                      Your guide is downloading. If it doesn't start, use 
+                      Your book is downloading. If it doesn't start, use 
                       the link below.
                     </p>
                     <a 
-                      href="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/the-blind-spot-lbhsXob401YUMWiX.pdf" 
+                      href="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/the-blind-spot-NNPjY86lXEJaCNnr.pdf" 
                       className="text-[#003456] font-black underline 
                         hover:text-[#7edb44]"
                       target="_blank"
@@ -316,13 +336,12 @@ const TheBlindSpot: React.FC = () => {
                 <>
                   <h3 className="text-2xl md:text-3xl font-black mb-4 
                     uppercase tracking-tight text-center">
-                    Get The Blind Spot Guide
+                    Get The Blind Spot Book
                   </h3>
                   <p className="text-gray-500 font-medium mb-10 text-center 
                     leading-relaxed italic">
-                    A field guide to recognizing the pattern before 
-                    trying to fix it. Complete the form below to 
-                    receive your digital copy instantly.
+                    See the pattern before you try to fix it. Complete 
+                    the form below to receive your digital copy instantly.
                   </p>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -402,7 +421,7 @@ const TheBlindSpot: React.FC = () => {
                         </div>
                       ) : (
                         <>
-                          Download The Guide
+                          Get The Blind Spot Book PDF
                           <svg className="w-6 h-6" fill="none" 
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" 
@@ -430,7 +449,7 @@ const TheBlindSpot: React.FC = () => {
 
       {/* Natural Progression Link - Moved here to appear after the Download Guide card */}
       <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center reveal">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-[#9ea7ae] font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-8">
             STAGE 01 COMPLETE?
           </p>

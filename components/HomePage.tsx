@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
                     Start Recognizing the Blind Spot →
                   </Link>
                   <p className="text-sm font-medium text-gray-400 opacity-80">
-                    A short read that makes the pattern visible.
+                    An Insightful read that makes the pattern visible.
                   </p>
                 </div>
               </div>
