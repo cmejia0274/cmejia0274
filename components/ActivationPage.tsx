@@ -148,7 +148,7 @@ const ActivationPage: React.FC = () => {
             <div className="max-w-4xl mx-auto mb-12">
               <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 bg-black group">
                 <video 
-                  src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/activation-video-v2.0-pGhj8hKiJLB0rGim.mp4"
+                  src="https://assets.zyrosite.com/Awvrjo5GqDcGBa7y/activation-2-dDQUK0KdAufp06uL.mp4"
                   className="w-full h-full object-cover"
                   controls
                   playsInline
